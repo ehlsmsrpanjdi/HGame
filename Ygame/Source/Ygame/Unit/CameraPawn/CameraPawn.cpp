@@ -51,15 +51,19 @@ void ACameraPawn::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 }
 
-void ACameraPawn::CameraRotate(FVector _Rotation)
+void ACameraPawn::CameraRotate(float _Float)
 {
-	CameraRotation->AddRelativeRotation(FRotator(_Rotation.X, _Rotation.Y, _Rotation.Z));
+	//CameraRotation->AddRelativeRotation(FRotator(0.f,));
 }
 
 void ACameraPawn::CameraZoom(float _Float)
 {
 	float Length = CameraBoom->TargetArmLength;
-	CameraBoom->TargetArmLength = Length + _Float;
+	float NewLength = Length + _Float;
+	if (NewLength + _Float < 200 || NewLength + _Float > 1200) {
+		return;
+	}
+	CameraBoom->TargetArmLength = NewLength;
 }
 
 void ACameraPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)

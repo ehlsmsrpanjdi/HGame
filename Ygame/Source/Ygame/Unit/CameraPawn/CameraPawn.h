@@ -28,7 +28,7 @@ public:
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 
-	void CameraRotate(FVector _Rotation);
+	void CameraRotate(float _Float);
 	void CameraZoom(float _Float);
 private:
 	// Called to bind functionality to input
@@ -43,5 +43,5 @@ private:
 
 	UPROPERTY()
 	class UArrowComponent* CameraRotation;
-	
+
 };

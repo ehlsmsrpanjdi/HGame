@@ -68,23 +68,26 @@ void AYgamePlayerController::RClick_Complete()
 
 void AYgamePlayerController::Wheel_Up()
 {
-	WheelTime += GetWorld()->GetDeltaSeconds();
-	if (WheelTime >= 0.5f) {
-		Main_Body->CameraZoom(10.f);
-	}
+	Main_Body->CameraZoom(100.f);
 }
 
 void AYgamePlayerController::Wheel_Down()
 {
-	WheelTime += GetWorld()->GetDeltaSeconds();
-	if (WheelTime >= 0.5f) {
-		Main_Body->CameraZoom(-10.f);
-	}
+	Main_Body->CameraZoom(-100.f);
 }
 
 void AYgamePlayerController::Wheel_End()
 {
 	WheelTime = 0.0f;
+}
+
+void AYgamePlayerController::RollLeft()
+{
+	Main_Body->
+}
+
+void AYgamePlayerController::RollRight()
+{
 }
 
 void AYgamePlayerController::SetupInputComponent()
@@ -114,4 +117,7 @@ void AYgamePlayerController::SetupInputComponent()
 
 	EIC->BindAction(DownWheel, ETriggerEvent::Triggered, this, &AYgamePlayerController::Wheel_Down);
 	EIC->BindAction(DownWheel, ETriggerEvent::Completed, this, &AYgamePlayerController::Wheel_End);
+
+	EIC->BindAction(RightWheel, ETriggerEvent::Triggered, this, &AYgamePlayerController::RollRight);
+	EIC->BindAction(LeftWheel, ETriggerEvent::Triggered, this, &AYgamePlayerController::RollLeft);
 }

@@ -58,6 +58,14 @@ struct Z_Construct_UClass_AYgamePlayerController_Statics
 		{ "Category", "Input" },
 		{ "ModuleRelativePath", "YgamePlayerController.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_LeftWheel_MetaData[] = {
+		{ "Category", "Input" },
+		{ "ModuleRelativePath", "YgamePlayerController.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RightWheel_MetaData[] = {
+		{ "Category", "Input" },
+		{ "ModuleRelativePath", "YgamePlayerController.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MainContext_MetaData[] = {
 		{ "Category", "Input" },
 		{ "ModuleRelativePath", "YgamePlayerController.h" },
@@ -82,6 +90,8 @@ struct Z_Construct_UClass_AYgamePlayerController_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ROnClick;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_UpWheel;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_DownWheel;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_LeftWheel;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_RightWheel;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_MainContext;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_MoveSpeed;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_WheelTime;
@@ -99,6 +109,8 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AYgamePlayerCo
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AYgamePlayerController_Statics::NewProp_ROnClick = { "ROnClick", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AYgamePlayerController, ROnClick), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ROnClick_MetaData), NewProp_ROnClick_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AYgamePlayerController_Statics::NewProp_UpWheel = { "UpWheel", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AYgamePlayerController, UpWheel), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_UpWheel_MetaData), NewProp_UpWheel_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AYgamePlayerController_Statics::NewProp_DownWheel = { "DownWheel", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AYgamePlayerController, DownWheel), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DownWheel_MetaData), NewProp_DownWheel_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AYgamePlayerController_Statics::NewProp_LeftWheel = { "LeftWheel", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AYgamePlayerController, LeftWheel), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LeftWheel_MetaData), NewProp_LeftWheel_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AYgamePlayerController_Statics::NewProp_RightWheel = { "RightWheel", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AYgamePlayerController, RightWheel), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RightWheel_MetaData), NewProp_RightWheel_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AYgamePlayerController_Statics::NewProp_MainContext = { "MainContext", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AYgamePlayerController, MainContext), Z_Construct_UClass_UInputMappingContext_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MainContext_MetaData), NewProp_MainContext_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AYgamePlayerController_Statics::NewProp_MoveSpeed = { "MoveSpeed", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AYgamePlayerController, MoveSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MoveSpeed_MetaData), NewProp_MoveSpeed_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AYgamePlayerController_Statics::NewProp_WheelTime = { "WheelTime", nullptr, (EPropertyFlags)0x0020080000000000, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AYgamePlayerController, WheelTime), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WheelTime_MetaData), NewProp_WheelTime_MetaData) };
@@ -110,6 +122,8 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AYgamePla
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AYgamePlayerController_Statics::NewProp_ROnClick,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AYgamePlayerController_Statics::NewProp_UpWheel,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AYgamePlayerController_Statics::NewProp_DownWheel,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AYgamePlayerController_Statics::NewProp_LeftWheel,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AYgamePlayerController_Statics::NewProp_RightWheel,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AYgamePlayerController_Statics::NewProp_MainContext,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AYgamePlayerController_Statics::NewProp_MoveSpeed,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AYgamePlayerController_Statics::NewProp_WheelTime,
@@ -157,10 +171,10 @@ AYgamePlayerController::~AYgamePlayerController() {}
 struct Z_CompiledInDeferFile_FID_Ygame_Source_Ygame_YgamePlayerController_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AYgamePlayerController, AYgamePlayerController::StaticClass, TEXT("AYgamePlayerController"), &Z_Registration_Info_UClass_AYgamePlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AYgamePlayerController), 240553492U) },
+		{ Z_Construct_UClass_AYgamePlayerController, AYgamePlayerController::StaticClass, TEXT("AYgamePlayerController"), &Z_Registration_Info_UClass_AYgamePlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AYgamePlayerController), 683433565U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Ygame_Source_Ygame_YgamePlayerController_h_3695515283(TEXT("/Script/Ygame"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Ygame_Source_Ygame_YgamePlayerController_h_1010944016(TEXT("/Script/Ygame"),
 	Z_CompiledInDeferFile_FID_Ygame_Source_Ygame_YgamePlayerController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Ygame_Source_Ygame_YgamePlayerController_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

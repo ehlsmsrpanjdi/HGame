@@ -37,6 +37,11 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Input)
 	UInputAction* DownWheel = nullptr;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Input)
+	UInputAction* LeftWheel = nullptr;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Input)
+	UInputAction* RightWheel = nullptr;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Input)
 	UInputMappingContext* MainContext = nullptr;
@@ -58,6 +63,9 @@ protected:
 	void Wheel_Up();
 	void Wheel_Down();
 	void Wheel_End();
+
+	void RollLeft();
+	void RollRight();
 
 	FVector Location;
 
