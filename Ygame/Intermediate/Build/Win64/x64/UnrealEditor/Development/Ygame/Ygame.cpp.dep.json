@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\unreal\\hgame\\ygame\\source\\ygame\\ygame.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\unreal\\hgame\\ygame\\intermediate\\build\\win64\\x64\\ygameeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "e:\\unreal\\hgame\\ygame\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\ygame\\definitions.ygame.h",
+            "e:\\unreal\\hgame\\ygame\\source\\ygame\\ygame.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"E:\\Unreal\\HGame\\Ygame\\Source\\Ygame\\Ygame.Build.cs",
+		"E:\\Unreal\\HGame\\Ygame\\Source\\Ygame.Target.cs",
+		"E:\\Unreal\\HGame\\Ygame\\Source\\YgameEditor.Target.cs"
+	],
+	"EngineVersion": "5.5.1"
+}
