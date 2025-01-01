@@ -10,7 +10,6 @@ public class Ygame : ModuleRules
 
         PublicIncludePaths.AddRange(
             new string[] {
-        "Ygame/Public",            // 기본 경로
         "Ygame/Unit"              // 절대 경로 추가
             }
         );

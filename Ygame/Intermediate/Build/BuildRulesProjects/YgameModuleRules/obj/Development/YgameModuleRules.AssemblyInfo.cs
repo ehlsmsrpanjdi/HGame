@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("YgameModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c93159876a25ba2e44c7cfd2a4ecce20268d6605")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4bf3acedf98100d66bba1726530255363285c028")]
 [assembly: System.Reflection.AssemblyProductAttribute("YgameModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("YgameModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
