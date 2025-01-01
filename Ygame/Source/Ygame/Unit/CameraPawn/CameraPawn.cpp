@@ -24,12 +24,12 @@ ACameraPawn::ACameraPawn()
 	CameraBoom->SetRelativeRotation(FRotator(-60.f, 0.f, 0.f));
 	CameraBoom->bDoCollisionTest = false; // Don't want to pull camera in when it collides with level
 
-	CameraRotation = CreateDefaultSubobject<UArrowComponent>(TEXT("CameraRotation"));
 
 	// Create a camera...
 	TopDownCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("TopDownCamera"));
 	TopDownCameraComponent->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
 	//TopDownCameraComponent->bUsePawnControlRotation = false; // Camera does not rotate relative to arm
+
 
 	// Activate ticking in order to update the cursor every frame.
 	PrimaryActorTick.bCanEverTick = true;

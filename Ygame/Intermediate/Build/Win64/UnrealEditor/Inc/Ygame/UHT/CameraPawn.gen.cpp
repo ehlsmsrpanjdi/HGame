@@ -10,7 +10,6 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeCameraPawn() {}
 
 // Begin Cross Module References
-ENGINE_API UClass* Z_Construct_UClass_UArrowComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Ygame();
@@ -54,14 +53,9 @@ struct Z_Construct_UClass_ACameraPawn_Statics
 		{ "ToolTip", "Camera boom positioning the camera above the character" },
 #endif
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CameraRotation_MetaData[] = {
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Unit/CameraPawn/CameraPawn.h" },
-	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_TopDownCameraComponent;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CameraBoom;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_CameraRotation;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -71,11 +65,9 @@ struct Z_Construct_UClass_ACameraPawn_Statics
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACameraPawn_Statics::NewProp_TopDownCameraComponent = { "TopDownCameraComponent", nullptr, (EPropertyFlags)0x00400000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACameraPawn, TopDownCameraComponent), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TopDownCameraComponent_MetaData), NewProp_TopDownCameraComponent_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACameraPawn_Statics::NewProp_CameraBoom = { "CameraBoom", nullptr, (EPropertyFlags)0x00400000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACameraPawn, CameraBoom), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CameraBoom_MetaData), NewProp_CameraBoom_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACameraPawn_Statics::NewProp_CameraRotation = { "CameraRotation", nullptr, (EPropertyFlags)0x0040000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACameraPawn, CameraRotation), Z_Construct_UClass_UArrowComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CameraRotation_MetaData), NewProp_CameraRotation_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACameraPawn_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACameraPawn_Statics::NewProp_TopDownCameraComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACameraPawn_Statics::NewProp_CameraBoom,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACameraPawn_Statics::NewProp_CameraRotation,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACameraPawn_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ACameraPawn_Statics::DependentSingletons[])() = {
@@ -118,10 +110,10 @@ ACameraPawn::~ACameraPawn() {}
 struct Z_CompiledInDeferFile_FID_Ygame_Source_Ygame_Unit_CameraPawn_CameraPawn_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ACameraPawn, ACameraPawn::StaticClass, TEXT("ACameraPawn"), &Z_Registration_Info_UClass_ACameraPawn, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACameraPawn), 1686066715U) },
+		{ Z_Construct_UClass_ACameraPawn, ACameraPawn::StaticClass, TEXT("ACameraPawn"), &Z_Registration_Info_UClass_ACameraPawn, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACameraPawn), 3600943053U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Ygame_Source_Ygame_Unit_CameraPawn_CameraPawn_h_3754418599(TEXT("/Script/Ygame"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Ygame_Source_Ygame_Unit_CameraPawn_CameraPawn_h_3333687302(TEXT("/Script/Ygame"),
 	Z_CompiledInDeferFile_FID_Ygame_Source_Ygame_Unit_CameraPawn_CameraPawn_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Ygame_Source_Ygame_Unit_CameraPawn_CameraPawn_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

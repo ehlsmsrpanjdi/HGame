@@ -22,7 +22,7 @@ class AYgamePlayerController : public APlayerController
 public:
 	AYgamePlayerController();
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input)
-	UNiagaraSystem* FXCursor;
+	UNiagaraSystem* FXCursor = nullptr;
 
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Input)
@@ -42,6 +42,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Input)
 	UInputAction* RightWheel = nullptr;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Input)
+	UInputAction* IA_Mouse = nullptr;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Input)
 	UInputMappingContext* MainContext = nullptr;
@@ -67,7 +70,9 @@ protected:
 	void RollLeft();
 	void RollRight();
 
-	FVector Location;
+	void Mouse_Move();
+
+	FVector Location = {};
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Input)
 	float MoveSpeed = 600.f;
@@ -79,6 +84,12 @@ protected:
 	TObjectPtr<class ACameraPawn> Main_Body = nullptr;
 	UPROPERTY()
 	class UFloatingPawnMovement* FloatingMovement = nullptr;
+
+	UPROPERTY()
+	FVector2D ViewPortSize = {};
+
+	UPROPERTY()
+	FVector2D MP = {};
 };
 
 

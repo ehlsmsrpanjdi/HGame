@@ -27,6 +27,9 @@ void AYgamePlayerController::BeginPlay()
 {
 	// Call the base class  
 	Super::BeginPlay();
+	int32 x, y;
+	GetViewportSize(x, y);
+	ViewPortSize = FVector2D(x, y);
 }
 
 void AYgamePlayerController::OnPossess(APawn* PawnToPossess)
@@ -50,16 +53,16 @@ void AYgamePlayerController::RClick_Triger()
 	if (true == GetHitResultUnderCursor(ECollisionChannel::ECC_Visibility, true, Hit)) {
 		Location = Hit.Location;
 	}
-	FVector Direction = (Location - Main_Body->GetActorLocation()).GetSafeNormal();
-	FVector Velocity = Direction * MoveSpeed;  // MoveSpeed는 원하는 이동 속도
-	FloatingMovement->Velocity = Velocity;
+	//FVector Direction = (Location - Main_Body->GetActorLocation()).GetSafeNormal();
+	//FVector Velocity = Direction * MoveSpeed;  // MoveSpeed는 원하는 이동 속도
+	//FloatingMovement->Velocity = Velocity;
 }
 
 void AYgamePlayerController::RClick_Complete()
 {
-	FVector Direction = (Location - Main_Body->GetActorLocation()).GetSafeNormal();
-	FVector Velocity = Direction * MoveSpeed;  // MoveSpeed는 원하는 이동 속도
-	FloatingMovement->Velocity = Velocity;
+	//FVector Direction = (Location - Main_Body->GetActorLocation()).GetSafeNormal();
+	//FVector Velocity = Direction * MoveSpeed;  // MoveSpeed는 원하는 이동 속도
+	//FloatingMovement->Velocity = Velocity;
 	UNiagaraFunctionLibrary::SpawnSystemAtLocation(this,
 		FXCursor, Location, FRotator::ZeroRotator,
 		FVector(1.f, 1.f, 1.f), true, true,
@@ -89,6 +92,38 @@ void AYgamePlayerController::RollLeft()
 void AYgamePlayerController::RollRight()
 {
 }
+
+void AYgamePlayerController::Mouse_Move()
+{
+	float MouseX, MouseY;
+	if (GetMousePosition(MouseX, MouseY))
+	{
+		MP = FVector2D(MouseX, MouseY) / ViewPortSize;
+		UE_LOG(LogTemp, Display, TEXT("%s"), *FText::FromString(MP.ToString()).ToString());
+		if (MP.X>= 0.95) {
+			FloatingMovement->Velocity = FVector(FloatingMovement->Velocity.Y, MoveSpeed, 0.f);
+		}
+		else if (MP.X <= 0.05) {
+			FloatingMovement->Velocity = FVector(FloatingMovement->Velocity.Y , -MoveSpeed, 0.f);
+		}
+		else {
+			FloatingMovement->Velocity = FVector(FloatingMovement->Velocity.X, 0.f,0.f);
+		}
+		if (MP.Y >= 0.95) {
+			FloatingMovement->Velocity = FVector(-MoveSpeed, FloatingMovement->Velocity.X, 0.f);
+
+		}
+		else if (MP.Y <= 0.05) {
+			FloatingMovement->Velocity = FVector(MoveSpeed, FloatingMovement->Velocity.X , 0.f);
+			//FloatingMovement->Velocity = FVector(600.f, 0.f, 0.f);
+		}
+		else {
+			FloatingMovement->Velocity = FVector(0.f, FloatingMovement->Velocity.Y, 0.f);
+		}
+	}
+}
+
+
 
 void AYgamePlayerController::SetupInputComponent()
 {
@@ -120,4 +155,8 @@ void AYgamePlayerController::SetupInputComponent()
 
 	EIC->BindAction(RightWheel, ETriggerEvent::Triggered, this, &AYgamePlayerController::RollRight);
 	EIC->BindAction(LeftWheel, ETriggerEvent::Triggered, this, &AYgamePlayerController::RollLeft);
+
+	EIC->BindAction(IA_Mouse, ETriggerEvent::Triggered, this, &AYgamePlayerController::Mouse_Move);
+
+
 }
