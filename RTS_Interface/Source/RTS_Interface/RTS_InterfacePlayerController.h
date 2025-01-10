@@ -25,18 +25,20 @@ public:
 
 
 protected:
+	virtual void Tick(float _DeltaTime) override;
 	virtual void SetupInputComponent() override;
 	virtual void BeginPlay();
 
 	UFUNCTION(BlueprintCallable)
-	void GetMousePos();
-
+	void GetMousePos(float _DeltaTime);
+	void ZoomIn();
+	void ZoomOut();
 protected:
-	UPROPERTY(EditAnywhere, Meta = (AllowPrivateAccess = true))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess = true))
 	TObjectPtr<UInputMappingContext> Input_mc;
-	UPROPERTY(EditAnywhere, Meta = (AllowPrivateAccess = true))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess = true))
 	TObjectPtr<UInputAction> Input_WheelUp;
-	UPROPERTY(EditAnywhere, Meta = (AllowPrivateAccess = true))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess = true))
 	TObjectPtr<UInputAction> Input_WheelDown;
 
 
@@ -51,6 +53,8 @@ private:
 	UPROPERTY()
 	int32 ViewSize[2];
 	virtual void Move(FVector _Vec);
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess = true))
+	float MouseSensetive = 600.f;
 };
 
 
