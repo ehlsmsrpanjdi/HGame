@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"E:\\Unreal\\HGame\\RTS_Interface\\Source\\RTS_Interface\\RTS_Interface.Build.cs",
+		"E:\\Unreal\\HGame\\RTS_Interface\\Source\\RTS_Interface.Target.cs",
+		"E:\\Unreal\\HGame\\RTS_Interface\\Source\\RTS_InterfaceEditor.Target.cs"
+	],
+	"EngineVersion": "5.5.1"
+}

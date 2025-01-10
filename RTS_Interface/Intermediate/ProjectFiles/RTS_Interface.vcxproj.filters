@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\RTS_Interface.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\RTS_Interface.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\RTS_InterfaceEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\RTS_Interface">
+      <UniqueIdentifier>{F1218C51-1C86-3830-8A7C-75D769BA52EE}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\RTS_Interface\RTS_Interface.Build.cs">
+      <Filter>Source\RTS_Interface</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\RTS_Interface\RTS_Interface.cpp">
+      <Filter>Source\RTS_Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RTS_Interface\RTS_Interface.h">
+      <Filter>Source\RTS_Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RTS_Interface\RTS_InterfaceCharacter.cpp">
+      <Filter>Source\RTS_Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RTS_Interface\RTS_InterfaceCharacter.h">
+      <Filter>Source\RTS_Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RTS_Interface\RTS_InterfaceGameMode.cpp">
+      <Filter>Source\RTS_Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RTS_Interface\RTS_InterfaceGameMode.h">
+      <Filter>Source\RTS_Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RTS_Interface\RTS_InterfacePlayerController.cpp">
+      <Filter>Source\RTS_Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RTS_Interface\RTS_InterfacePlayerController.h">
+      <Filter>Source\RTS_Interface</Filter>
+    </ClCompile>
+    <Filter Include="Source\RTS_Interface\C_Game">
+      <UniqueIdentifier>{544457F7-5205-3040-8A9C-BBB242CB5F2A}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\RTS_Interface\C_Game\C_Instance.cpp">
+      <Filter>Source\RTS_Interface\C_Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RTS_Interface\C_Game\C_Instance.h">
+      <Filter>Source\RTS_Interface\C_Game</Filter>
+    </ClCompile>
+    <Filter Include="Source\RTS_Interface\C_Game\C_Unit">
+      <UniqueIdentifier>{938AE584-624E-3E72-98DB-C0095D7BBA15}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\RTS_Interface\C_Game\C_Unit\C_CameraPawn.cpp">
+      <Filter>Source\RTS_Interface\C_Game\C_Unit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RTS_Interface\C_Game\C_Unit\C_CameraPawn.h">
+      <Filter>Source\RTS_Interface\C_Game\C_Unit</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
