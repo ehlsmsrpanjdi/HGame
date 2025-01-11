@@ -84,6 +84,18 @@
     <ClCompile Include="..\..\Source\RTS_Interface\C_Game\C_Unit\C_CameraPawn.h">
       <Filter>Source\RTS_Interface\C_Game\C_Unit</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\RTS_Interface\C_Game\C_Unit\Selection_Pawn.cpp">
+      <Filter>Source\RTS_Interface\C_Game\C_Unit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RTS_Interface\C_Game\C_Unit\Selection_Pawn.h">
+      <Filter>Source\RTS_Interface\C_Game\C_Unit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RTS_Interface\C_Game\C_Unit\Selection_Unit.cpp">
+      <Filter>Source\RTS_Interface\C_Game\C_Unit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RTS_Interface\C_Game\C_Unit\Selection_Unit.h">
+      <Filter>Source\RTS_Interface\C_Game\C_Unit</Filter>
+    </ClCompile>
     <Filter Include="Source\RTS_Interface\C_Game\Interface">
       <UniqueIdentifier>{E5E6029D-7DD1-3E1D-949D-730D0A1F6CE6}</UniqueIdentifier>
     </Filter>

@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\unreal\\hgame\\rts_interface\\source\\rts_interface\\c_game\\interface\\widgetinterface.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\unreal\\hgame\\rts_interface\\intermediate\\build\\win64\\x64\\rts_interfaceeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "e:\\unreal\\hgame\\rts_interface\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\rts_interface\\definitions.rts_interface.h",
+            "e:\\unreal\\hgame\\rts_interface\\source\\rts_interface\\c_game\\interface\\widgetinterface.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

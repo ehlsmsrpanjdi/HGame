@@ -18,7 +18,7 @@ public:
 	AC_HUD();
 protected:
 	virtual void BeginPlay() override;
-
+	virtual void Tick(float _DeltaTime) override;
 	virtual void DrawHUD() override;
 	void OpenClick(FVector2D _StartMousePos);
 	void HoldClick(FVector2D _CurrentMousePos);
@@ -28,9 +28,11 @@ protected:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
 	FVector2D CurrentMousePos;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
-	TArray<AActor*> SelectedActors;
+	TArray<class ASelection_Pawn*> SelectedActors;
 
 private:
 	UPROPERTY()
 	bool bIsDrawing = false;
+	UPROPERTY()
+	TObjectPtr<class ARTS_InterfacePlayerController> RTS_Controller = nullptr;
 };

@@ -23,12 +23,12 @@ class ARTS_InterfacePlayerController : public APlayerController
 public:
 	ARTS_InterfacePlayerController();
 
+	const double* ReturnMousePos();
 
 protected:
 	virtual void Tick(float _DeltaTime) override;
 	virtual void SetupInputComponent() override;
 	virtual void BeginPlay();
-
 	UFUNCTION(BlueprintCallable)
 	void GetMousePos(float _DeltaTime);
 protected: //wheel
@@ -52,11 +52,6 @@ protected:
 	TObjectPtr<UInputAction> Input_RightClick;
 
 
-	//void SomeCallbackFunc(const FInputActionInstance& Instance)
-	//{
-	//	FVector VectorValue = Instance.GetValue().Get<FVector>();
-	//	// 여기서 멋진 작업을 수행하세요!
-	//}
 private:
 	UPROPERTY()
 	double MLocation[2];

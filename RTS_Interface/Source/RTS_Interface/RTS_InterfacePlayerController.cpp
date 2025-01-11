@@ -32,6 +32,11 @@ void ARTS_InterfacePlayerController::BeginPlay()
 	}
 }
 
+const double* ARTS_InterfacePlayerController::ReturnMousePos()
+{
+	return MLocation;
+}
+
 void ARTS_InterfacePlayerController::GetMousePos(float _DeltaTime)
 {
 	GetMousePosition(MLocation[0], MLocation[1]);
@@ -71,8 +76,8 @@ void ARTS_InterfacePlayerController::LOpenClick()
 
 void ARTS_InterfacePlayerController::LHoldClick()
 {
-	RTS_HUD->HoldClick(FVector2D(MLocation[0], MLocation[1]));
-	UE_LOG(LogTemp, Display, TEXT("OnClick"));
+	//RTS_HUD->HoldClick(FVector2D(MLocation[0], MLocation[1]));
+	//UE_LOG(LogTemp, Display, TEXT("OnClick"));
 }
 
 void ARTS_InterfacePlayerController::LEndClick()
