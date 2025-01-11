@@ -33,6 +33,12 @@
     <Filter Include="Source\RTS_Interface">
       <UniqueIdentifier>{F1218C51-1C86-3830-8A7C-75D769BA52EE}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\RTS_Interface\C_HUD.cpp">
+      <Filter>Source\RTS_Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RTS_Interface\C_HUD.h">
+      <Filter>Source\RTS_Interface</Filter>
+    </ClCompile>
     <None Include="..\..\Source\RTS_Interface\RTS_Interface.Build.cs">
       <Filter>Source\RTS_Interface</Filter>
     </None>
