@@ -13,6 +13,7 @@ void EmptyLinkFunctionForGeneratedCodeRTS_InterfacePlayerController() {}
 ENGINE_API UClass* Z_Construct_UClass_APlayerController();
 ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputAction_NoRegister();
 ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputMappingContext_NoRegister();
+RTS_INTERFACE_API UClass* Z_Construct_UClass_AC_HUD_NoRegister();
 RTS_INTERFACE_API UClass* Z_Construct_UClass_ARTS_InterfacePlayerController();
 RTS_INTERFACE_API UClass* Z_Construct_UClass_ARTS_InterfacePlayerController_NoRegister();
 UPackage* Z_Construct_UPackage__Script_RTS_Interface();
@@ -97,6 +98,16 @@ struct Z_Construct_UClass_ARTS_InterfacePlayerController_Statics
 		{ "Category", "RTS_InterfacePlayerController" },
 		{ "ModuleRelativePath", "RTS_InterfacePlayerController.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Input_LeftClick_MetaData[] = {
+		{ "AllowPrivateAccess", "TRUE" },
+		{ "Category", "RTS_InterfacePlayerController" },
+		{ "ModuleRelativePath", "RTS_InterfacePlayerController.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Input_RightClick_MetaData[] = {
+		{ "AllowPrivateAccess", "TRUE" },
+		{ "Category", "RTS_InterfacePlayerController" },
+		{ "ModuleRelativePath", "RTS_InterfacePlayerController.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MLocation_MetaData[] = {
 		{ "ModuleRelativePath", "RTS_InterfacePlayerController.h" },
 	};
@@ -108,13 +119,19 @@ struct Z_Construct_UClass_ARTS_InterfacePlayerController_Statics
 		{ "Category", "RTS_InterfacePlayerController" },
 		{ "ModuleRelativePath", "RTS_InterfacePlayerController.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RTS_HUD_MetaData[] = {
+		{ "ModuleRelativePath", "RTS_InterfacePlayerController.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Input_mc;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Input_WheelUp;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Input_WheelDown;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Input_LeftClick;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Input_RightClick;
 	static const UECodeGen_Private::FDoublePropertyParams NewProp_MLocation;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ViewSize;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_MouseSensetive;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_RTS_HUD;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -129,16 +146,22 @@ struct Z_Construct_UClass_ARTS_InterfacePlayerController_Statics
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARTS_InterfacePlayerController_Statics::NewProp_Input_mc = { "Input_mc", nullptr, (EPropertyFlags)0x0124080000000005, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARTS_InterfacePlayerController, Input_mc), Z_Construct_UClass_UInputMappingContext_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Input_mc_MetaData), NewProp_Input_mc_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARTS_InterfacePlayerController_Statics::NewProp_Input_WheelUp = { "Input_WheelUp", nullptr, (EPropertyFlags)0x0124080000000005, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARTS_InterfacePlayerController, Input_WheelUp), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Input_WheelUp_MetaData), NewProp_Input_WheelUp_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARTS_InterfacePlayerController_Statics::NewProp_Input_WheelDown = { "Input_WheelDown", nullptr, (EPropertyFlags)0x0124080000000005, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARTS_InterfacePlayerController, Input_WheelDown), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Input_WheelDown_MetaData), NewProp_Input_WheelDown_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARTS_InterfacePlayerController_Statics::NewProp_Input_LeftClick = { "Input_LeftClick", nullptr, (EPropertyFlags)0x0124080000000005, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARTS_InterfacePlayerController, Input_LeftClick), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Input_LeftClick_MetaData), NewProp_Input_LeftClick_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARTS_InterfacePlayerController_Statics::NewProp_Input_RightClick = { "Input_RightClick", nullptr, (EPropertyFlags)0x0124080000000005, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARTS_InterfacePlayerController, Input_RightClick), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Input_RightClick_MetaData), NewProp_Input_RightClick_MetaData) };
 const UECodeGen_Private::FDoublePropertyParams Z_Construct_UClass_ARTS_InterfacePlayerController_Statics::NewProp_MLocation = { "MLocation", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Double, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, CPP_ARRAY_DIM(MLocation, ARTS_InterfacePlayerController), STRUCT_OFFSET(ARTS_InterfacePlayerController, MLocation), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MLocation_MetaData), NewProp_MLocation_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_ARTS_InterfacePlayerController_Statics::NewProp_ViewSize = { "ViewSize", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, CPP_ARRAY_DIM(ViewSize, ARTS_InterfacePlayerController), STRUCT_OFFSET(ARTS_InterfacePlayerController, ViewSize), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ViewSize_MetaData), NewProp_ViewSize_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ARTS_InterfacePlayerController_Statics::NewProp_MouseSensetive = { "MouseSensetive", nullptr, (EPropertyFlags)0x0040000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARTS_InterfacePlayerController, MouseSensetive), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MouseSensetive_MetaData), NewProp_MouseSensetive_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARTS_InterfacePlayerController_Statics::NewProp_RTS_HUD = { "RTS_HUD", nullptr, (EPropertyFlags)0x0144000000000000, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ARTS_InterfacePlayerController, RTS_HUD), Z_Construct_UClass_AC_HUD_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RTS_HUD_MetaData), NewProp_RTS_HUD_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ARTS_InterfacePlayerController_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARTS_InterfacePlayerController_Statics::NewProp_Input_mc,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARTS_InterfacePlayerController_Statics::NewProp_Input_WheelUp,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARTS_InterfacePlayerController_Statics::NewProp_Input_WheelDown,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARTS_InterfacePlayerController_Statics::NewProp_Input_LeftClick,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARTS_InterfacePlayerController_Statics::NewProp_Input_RightClick,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARTS_InterfacePlayerController_Statics::NewProp_MLocation,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARTS_InterfacePlayerController_Statics::NewProp_ViewSize,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARTS_InterfacePlayerController_Statics::NewProp_MouseSensetive,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARTS_InterfacePlayerController_Statics::NewProp_RTS_HUD,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ARTS_InterfacePlayerController_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ARTS_InterfacePlayerController_Statics::DependentSingletons[])() = {
@@ -181,10 +204,10 @@ ARTS_InterfacePlayerController::~ARTS_InterfacePlayerController() {}
 struct Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_RTS_InterfacePlayerController_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ARTS_InterfacePlayerController, ARTS_InterfacePlayerController::StaticClass, TEXT("ARTS_InterfacePlayerController"), &Z_Registration_Info_UClass_ARTS_InterfacePlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARTS_InterfacePlayerController), 623207062U) },
+		{ Z_Construct_UClass_ARTS_InterfacePlayerController, ARTS_InterfacePlayerController::StaticClass, TEXT("ARTS_InterfacePlayerController"), &Z_Registration_Info_UClass_ARTS_InterfacePlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ARTS_InterfacePlayerController), 1478489849U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_RTS_InterfacePlayerController_h_1316709584(TEXT("/Script/RTS_Interface"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_RTS_InterfacePlayerController_h_2120145630(TEXT("/Script/RTS_Interface"),
 	Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_RTS_InterfacePlayerController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_RTS_InterfacePlayerController_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

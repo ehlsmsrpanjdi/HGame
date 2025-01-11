@@ -12,7 +12,7 @@
 class UNiagaraSystem;
 class UInputMappingContext;
 class UInputAction;
-
+class AC_HUD;
 DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
 
 UCLASS()
@@ -31,8 +31,14 @@ protected:
 
 	UFUNCTION(BlueprintCallable)
 	void GetMousePos(float _DeltaTime);
+protected: //wheel
 	void ZoomIn();
 	void ZoomOut();
+
+protected: //click
+	void LOpenClick();
+	void LHoldClick();
+	void LEndClick();
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess = true))
 	TObjectPtr<UInputMappingContext> Input_mc;
@@ -40,7 +46,10 @@ protected:
 	TObjectPtr<UInputAction> Input_WheelUp;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess = true))
 	TObjectPtr<UInputAction> Input_WheelDown;
-
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess = true))
+	TObjectPtr<UInputAction> Input_LeftClick;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess = true))
+	TObjectPtr<UInputAction> Input_RightClick;
 
 
 	//void SomeCallbackFunc(const FInputActionInstance& Instance)
@@ -56,6 +65,9 @@ private:
 	virtual void Move(FVector _Vec);
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess = true))
 	float MouseSensetive = 600.f;
+
+	UPROPERTY()
+	TObjectPtr<AC_HUD> RTS_HUD;
 };
 
 
