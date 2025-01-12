@@ -13,8 +13,8 @@ UCLASS()
 class RTS_INTERFACE_API AC_GameState : public AGameStateBase
 {
 	GENERATED_BODY()
-	
-public:
-	UPROPERTY(BlueprintCallable, EditAnywhere)
-	TArray<class ASelection_Unit*> Selected_Units;
+	friend class UC_Instance;
+protected:
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	TArray<class ASelection_Unit*> All_Bast_Unit;
 };

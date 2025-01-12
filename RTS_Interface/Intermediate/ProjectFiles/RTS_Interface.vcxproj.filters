@@ -45,6 +45,12 @@
     <ClCompile Include="..\..\Source\RTS_Interface\C_HUD.h">
       <Filter>Source\RTS_Interface</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\RTS_Interface\C_Instance.cpp">
+      <Filter>Source\RTS_Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RTS_Interface\C_Instance.h">
+      <Filter>Source\RTS_Interface</Filter>
+    </ClCompile>
     <None Include="..\..\Source\RTS_Interface\RTS_Interface.Build.cs">
       <Filter>Source\RTS_Interface</Filter>
     </None>
@@ -69,12 +75,6 @@
     <Filter Include="Source\RTS_Interface\C_Game">
       <UniqueIdentifier>{544457F7-5205-3040-8A9C-BBB242CB5F2A}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\RTS_Interface\C_Game\C_Instance.cpp">
-      <Filter>Source\RTS_Interface\C_Game</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\RTS_Interface\C_Game\C_Instance.h">
-      <Filter>Source\RTS_Interface\C_Game</Filter>
-    </ClCompile>
     <Filter Include="Source\RTS_Interface\C_Game\C_Unit">
       <UniqueIdentifier>{938AE584-624E-3E72-98DB-C0095D7BBA15}</UniqueIdentifier>
     </Filter>
@@ -84,17 +84,26 @@
     <ClCompile Include="..\..\Source\RTS_Interface\C_Game\C_Unit\C_CameraPawn.h">
       <Filter>Source\RTS_Interface\C_Game\C_Unit</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\RTS_Interface\C_Game\C_Unit\Selection_Pawn.cpp">
-      <Filter>Source\RTS_Interface\C_Game\C_Unit</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\RTS_Interface\C_Game\C_Unit\Selection_Pawn.h">
-      <Filter>Source\RTS_Interface\C_Game\C_Unit</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\RTS_Interface\C_Game\C_Unit\Selection_Unit.cpp">
       <Filter>Source\RTS_Interface\C_Game\C_Unit</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\RTS_Interface\C_Game\C_Unit\Selection_Unit.h">
       <Filter>Source\RTS_Interface\C_Game\C_Unit</Filter>
+    </ClCompile>
+    <Filter Include="Source\RTS_Interface\C_Game\C_Widget">
+      <UniqueIdentifier>{1F6ADB31-8C50-3ACA-A6CB-F1213160A168}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\RTS_Interface\C_Game\C_Widget\C_SelectAreaWidget.cpp">
+      <Filter>Source\RTS_Interface\C_Game\C_Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RTS_Interface\C_Game\C_Widget\C_SelectAreaWidget.h">
+      <Filter>Source\RTS_Interface\C_Game\C_Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RTS_Interface\C_Game\C_Widget\C_UnitWidget.cpp">
+      <Filter>Source\RTS_Interface\C_Game\C_Widget</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RTS_Interface\C_Game\C_Widget\C_UnitWidget.h">
+      <Filter>Source\RTS_Interface\C_Game\C_Widget</Filter>
     </ClCompile>
     <Filter Include="Source\RTS_Interface\C_Game\Interface">
       <UniqueIdentifier>{E5E6029D-7DD1-3E1D-949D-730D0A1F6CE6}</UniqueIdentifier>

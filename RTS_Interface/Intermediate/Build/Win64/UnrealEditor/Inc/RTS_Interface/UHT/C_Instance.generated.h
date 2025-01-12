@@ -4,7 +4,7 @@
 	DO NOT modify this manually! Edit the corresponding .h files instead!
 ===========================================================================*/
 
-// IWYU pragma: private, include "C_Game/C_Instance.h"
+// IWYU pragma: private, include "C_Instance.h"
 #include "UObject/ObjectMacros.h"
 #include "UObject/ScriptMacros.h"
 
@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define RTS_INTERFACE_C_Instance_generated_h
 
-#define FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Instance_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_RTS_Interface_Source_RTS_Interface_C_Instance_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUC_Instance(); \
 	friend struct Z_Construct_UClass_UC_Instance_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(UC_Instance)
 
 
-#define FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Instance_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_RTS_Interface_Source_RTS_Interface_C_Instance_h_15_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UC_Instance(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -37,12 +37,12 @@ public: \
 	NO_API virtual ~UC_Instance();
 
 
-#define FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Instance_h_12_PROLOG
-#define FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Instance_h_15_GENERATED_BODY \
+#define FID_RTS_Interface_Source_RTS_Interface_C_Instance_h_12_PROLOG
+#define FID_RTS_Interface_Source_RTS_Interface_C_Instance_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Instance_h_15_INCLASS_NO_PURE_DECLS \
-	FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Instance_h_15_ENHANCED_CONSTRUCTORS \
+	FID_RTS_Interface_Source_RTS_Interface_C_Instance_h_15_INCLASS_NO_PURE_DECLS \
+	FID_RTS_Interface_Source_RTS_Interface_C_Instance_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -50,7 +50,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> RTS_INTERFACE_API UClass* StaticClass<class UC_Instance>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Instance_h
+#define CURRENT_FILE_ID FID_RTS_Interface_Source_RTS_Interface_C_Instance_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

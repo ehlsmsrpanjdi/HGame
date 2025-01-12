@@ -2,7 +2,9 @@
 
 
 #include "C_Game/C_Unit/Selection_Unit.h"
-#include "../C_Instance.h"
+#include "../../C_Instance.h"
+#include "../C_Widget/C_UnitWidget.h"
+#include "../../C_GameState.h"
 // Sets default values
 ASelection_Unit::ASelection_Unit()
 {
@@ -18,7 +20,14 @@ ASelection_Unit::ASelection_Unit()
 void ASelection_Unit::BeginPlay()
 {
 	Super::BeginPlay();
-	GetWorld()->GetGameState();
+	UC_Instance* Inst = Cast<UC_Instance>(GetGameInstance());
+	if (true == Inst->IsValidLowLevel()) {
+		Inst->AddBaseUnit(this);
+	}
+	Unit_Widget = CreateWidget<UC_UnitWidget>(GetWorld(), Unit_Widget_Class);
+	if (Unit_Widget->IsValidLowLevel() == true) {
+		Unit_Widget->SetUnit(this);
+	}
 }
 
 // Called every frame

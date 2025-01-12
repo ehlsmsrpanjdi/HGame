@@ -29,9 +29,20 @@ protected:
 	FVector2D CurrentMousePos;
 
 
-private:
+
+protected:
 	UPROPERTY()
 	bool bIsDrawing = false;
 	UPROPERTY()
+	bool bEndDrawing = false;
+	UPROPERTY()
 	TObjectPtr<class ARTS_InterfacePlayerController> RTS_Controller = nullptr;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+	TSubclassOf<class UC_SelectAreaWidget> AreaWidgetClass;
+	UPROPERTY(BlueprintReadWrite, VisibleAnywhere, meta = (AllowPrivateAccess = true))
+	TObjectPtr<class UC_SelectAreaWidget> AreaWidget;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+	TArray<class ASelection_Unit*> Selected_Units;
 };

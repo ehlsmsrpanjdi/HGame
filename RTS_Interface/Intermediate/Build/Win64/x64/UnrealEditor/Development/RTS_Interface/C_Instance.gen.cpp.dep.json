@@ -6,7 +6,7 @@
         "PCH": "e:\\unreal\\hgame\\rts_interface\\intermediate\\build\\win64\\x64\\rts_interfaceeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
         "Includes": [
             "e:\\unreal\\hgame\\rts_interface\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\rts_interface\\definitions.rts_interface.h",
-            "e:\\unreal\\hgame\\rts_interface\\source\\rts_interface\\c_game\\c_instance.h",
+            "e:\\unreal\\hgame\\rts_interface\\source\\rts_interface\\c_instance.h",
             "e:\\unreal\\hgame\\rts_interface\\intermediate\\build\\win64\\unrealeditor\\inc\\rts_interface\\uht\\c_instance.generated.h"
         ],
         "ImportedModules": [],

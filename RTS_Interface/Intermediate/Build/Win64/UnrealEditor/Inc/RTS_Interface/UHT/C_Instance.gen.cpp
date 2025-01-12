@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "RTS_Interface/C_Game/C_Instance.h"
+#include "RTS_Interface/C_Instance.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeC_Instance() {}
 
@@ -32,8 +32,8 @@ struct Z_Construct_UClass_UC_Instance_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "/**\n * \n */" },
 #endif
-		{ "IncludePath", "C_Game/C_Instance.h" },
-		{ "ModuleRelativePath", "C_Game/C_Instance.h" },
+		{ "IncludePath", "C_Instance.h" },
+		{ "ModuleRelativePath", "C_Instance.h" },
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
@@ -80,14 +80,14 @@ UC_Instance::~UC_Instance() {}
 // End Class UC_Instance
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Instance_h_Statics
+struct Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Instance_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UC_Instance, UC_Instance::StaticClass, TEXT("UC_Instance"), &Z_Registration_Info_UClass_UC_Instance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UC_Instance), 3851687428U) },
+		{ Z_Construct_UClass_UC_Instance, UC_Instance::StaticClass, TEXT("UC_Instance"), &Z_Registration_Info_UClass_UC_Instance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UC_Instance), 3790764714U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Instance_h_3237289360(TEXT("/Script/RTS_Interface"),
-	Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Instance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Instance_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Instance_h_3289724105(TEXT("/Script/RTS_Interface"),
+	Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Instance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Instance_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration
