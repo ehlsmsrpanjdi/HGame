@@ -27,8 +27,7 @@ protected:
 	FVector2D StartMousePos;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
 	FVector2D CurrentMousePos;
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
-	TArray<class ASelection_Pawn*> SelectedActors;
+
 
 private:
 	UPROPERTY()

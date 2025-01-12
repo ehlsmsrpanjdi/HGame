@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define RTS_INTERFACE_Selection_Unit_generated_h
 
-#define FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Unit_Selection_Unit_h_12_INCLASS_NO_PURE_DECLS \
+#define FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Unit_Selection_Unit_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesASelection_Unit(); \
 	friend struct Z_Construct_UClass_ASelection_Unit_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(ASelection_Unit)
 
 
-#define FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Unit_Selection_Unit_h_12_ENHANCED_CONSTRUCTORS \
+#define FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Unit_Selection_Unit_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ASelection_Unit(ASelection_Unit&&); \
@@ -35,12 +35,12 @@ public: \
 	NO_API virtual ~ASelection_Unit();
 
 
-#define FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Unit_Selection_Unit_h_9_PROLOG
-#define FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Unit_Selection_Unit_h_12_GENERATED_BODY \
+#define FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Unit_Selection_Unit_h_12_PROLOG
+#define FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Unit_Selection_Unit_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Unit_Selection_Unit_h_12_INCLASS_NO_PURE_DECLS \
-	FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Unit_Selection_Unit_h_12_ENHANCED_CONSTRUCTORS \
+	FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Unit_Selection_Unit_h_15_INCLASS_NO_PURE_DECLS \
+	FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Unit_Selection_Unit_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

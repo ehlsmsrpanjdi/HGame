@@ -14,4 +14,7 @@ class RTS_INTERFACE_API UC_Instance : public UGameInstance
 {
 	GENERATED_BODY()
 	
+public:
+	TObjectPtr<class AC_GameState> GetGameState();
+	TObjectPtr<AC_GameState> G_State = nullptr;
 };

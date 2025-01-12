@@ -40,7 +40,7 @@ void AC_HUD::OpenClick(FVector2D _StartMousePos)
 
 void AC_HUD::EndClick()
 {
-	GetActorsInSelectionRectangle(StartMousePos, CurrentMousePos, SelectedActors);
+	//GetActorsInSelectionRectangle(StartMousePos, CurrentMousePos, SelectedActors);
 	bIsDrawing = false;
 	FInputModeGameOnly GameOnly;
 	RTS_Controller->SetInputMode(GameOnly);

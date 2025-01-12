@@ -2,7 +2,6 @@
 
 #include "RTS_InterfaceGameMode.h"
 #include "RTS_InterfacePlayerController.h"
-#include "RTS_InterfaceCharacter.h"
 #include "UObject/ConstructorHelpers.h"
 
 ARTS_InterfaceGameMode::ARTS_InterfaceGameMode()

@@ -11,6 +11,7 @@ void EmptyLinkFunctionForGeneratedCodeSelection_Unit() {}
 
 // Begin Cross Module References
 ENGINE_API UClass* Z_Construct_UClass_ACharacter();
+ENGINE_API UClass* Z_Construct_UClass_UDecalComponent_NoRegister();
 RTS_INTERFACE_API UClass* Z_Construct_UClass_ASelection_Unit();
 RTS_INTERFACE_API UClass* Z_Construct_UClass_ASelection_Unit_NoRegister();
 UPackage* Z_Construct_UPackage__Script_RTS_Interface();
@@ -33,13 +34,26 @@ struct Z_Construct_UClass_ASelection_Unit_Statics
 		{ "IncludePath", "C_Game/C_Unit/Selection_Unit.h" },
 		{ "ModuleRelativePath", "C_Game/C_Unit/Selection_Unit.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DSelection_MetaData[] = {
+		{ "AllowPrivateAccess", "TRUE" },
+		{ "Category", "Selection_Unit" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "C_Game/C_Unit/Selection_Unit.h" },
+	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_DSelection;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ASelection_Unit>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASelection_Unit_Statics::NewProp_DSelection = { "DSelection", nullptr, (EPropertyFlags)0x012408000008000d, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASelection_Unit, DSelection), Z_Construct_UClass_UDecalComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DSelection_MetaData), NewProp_DSelection_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASelection_Unit_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASelection_Unit_Statics::NewProp_DSelection,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ASelection_Unit_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ASelection_Unit_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_ACharacter,
 	(UObject* (*)())Z_Construct_UPackage__Script_RTS_Interface,
@@ -51,11 +65,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_ASelection_Unit_Statics
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
 	nullptr,
-	nullptr,
+	Z_Construct_UClass_ASelection_Unit_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
 	0,
-	0,
+	UE_ARRAY_COUNT(Z_Construct_UClass_ASelection_Unit_Statics::PropPointers),
 	0,
 	0x009000A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ASelection_Unit_Statics::Class_MetaDataParams), Z_Construct_UClass_ASelection_Unit_Statics::Class_MetaDataParams)
@@ -80,10 +94,10 @@ ASelection_Unit::~ASelection_Unit() {}
 struct Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Unit_Selection_Unit_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ASelection_Unit, ASelection_Unit::StaticClass, TEXT("ASelection_Unit"), &Z_Registration_Info_UClass_ASelection_Unit, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASelection_Unit), 2089865812U) },
+		{ Z_Construct_UClass_ASelection_Unit, ASelection_Unit::StaticClass, TEXT("ASelection_Unit"), &Z_Registration_Info_UClass_ASelection_Unit, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASelection_Unit), 1896581733U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Unit_Selection_Unit_h_2814165383(TEXT("/Script/RTS_Interface"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Unit_Selection_Unit_h_2562677751(TEXT("/Script/RTS_Interface"),
 	Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Unit_Selection_Unit_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Unit_Selection_Unit_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
