@@ -58,13 +58,13 @@ void ARTS_InterfacePlayerController::GetMousePos(float _DeltaTime)
 void ARTS_InterfacePlayerController::ZoomIn()
 {
 	float ftime = GetWorld()->GetDeltaSeconds();
-	Move(FVector(0.f, 0.f, MouseSensetive * 1.5f * ftime));
+	Move(FVector(0.f, 0.f, MouseSensetive * -1.5f * ftime));
 }
 
 void ARTS_InterfacePlayerController::ZoomOut()
 {
 	float ftime = GetWorld()->GetDeltaSeconds();
-	Move(FVector(0.f, 0.f, MouseSensetive * -1.5f * ftime));
+	Move(FVector(0.f, 0.f, MouseSensetive * 1.5f * ftime));
 }
 
 void ARTS_InterfacePlayerController::LOpenClick()

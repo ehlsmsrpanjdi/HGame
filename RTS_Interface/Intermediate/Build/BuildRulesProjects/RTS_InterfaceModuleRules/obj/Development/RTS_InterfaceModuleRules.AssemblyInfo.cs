@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RTS_InterfaceModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aaac4dd87f87615b49dc50bb143b568ed8f4e3d6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+275a5ffdfed54baf7aa7f5a41d50b279a73ee024")]
 [assembly: System.Reflection.AssemblyProductAttribute("RTS_InterfaceModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RTS_InterfaceModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

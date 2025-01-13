@@ -28,13 +28,16 @@ void ASelection_Unit::BeginPlay()
 	if (Unit_Widget->IsValidLowLevel() == true) {
 		Unit_Widget->SetUnit(this);
 	}
+
 }
 
 // Called every frame
 void ASelection_Unit::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
+	if (UnitType == EUnitType::None) {
+		UE_LOG(LogTemp, Warning, TEXT("Not Set UnitType"));
+	}
 }
 
 // Called to bind functionality to input

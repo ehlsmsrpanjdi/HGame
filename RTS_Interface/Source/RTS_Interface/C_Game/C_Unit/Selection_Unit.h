@@ -11,6 +11,14 @@
 #include "Selection_Unit.generated.h"
 
 
+UENUM(BlueprintType) // 이 옵션을 사용하면 블루프린트에서 사용할 수 있음
+enum class EUnitType : uint8
+{
+	None UMETA(DisplayName = "None"),       // 미정
+	Unit UMETA(DisplayName = "Unit"),       // 이동가능 유닛
+	Building UMETA(DisplayName = "Building"),   // 건물
+};
+
 UCLASS()
 class RTS_INTERFACE_API ASelection_Unit : public ACharacter
 {
@@ -41,4 +49,8 @@ protected:
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
 	TSubclassOf<UC_UnitWidget> Unit_Widget_Class = nullptr;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+	EUnitType UnitType = EUnitType::None;
 };
+

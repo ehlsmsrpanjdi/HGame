@@ -17,8 +17,76 @@ ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
 RTS_INTERFACE_API UClass* Z_Construct_UClass_ASelection_Unit();
 RTS_INTERFACE_API UClass* Z_Construct_UClass_ASelection_Unit_NoRegister();
 RTS_INTERFACE_API UClass* Z_Construct_UClass_UC_UnitWidget_NoRegister();
+RTS_INTERFACE_API UEnum* Z_Construct_UEnum_RTS_Interface_EUnitType();
 UPackage* Z_Construct_UPackage__Script_RTS_Interface();
 // End Cross Module References
+
+// Begin Enum EUnitType
+static FEnumRegistrationInfo Z_Registration_Info_UEnum_EUnitType;
+static UEnum* EUnitType_StaticEnum()
+{
+	if (!Z_Registration_Info_UEnum_EUnitType.OuterSingleton)
+	{
+		Z_Registration_Info_UEnum_EUnitType.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_RTS_Interface_EUnitType, (UObject*)Z_Construct_UPackage__Script_RTS_Interface(), TEXT("EUnitType"));
+	}
+	return Z_Registration_Info_UEnum_EUnitType.OuterSingleton;
+}
+template<> RTS_INTERFACE_API UEnum* StaticEnum<EUnitType>()
+{
+	return EUnitType_StaticEnum();
+}
+struct Z_Construct_UEnum_RTS_Interface_EUnitType_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "Building.Comment", "// \xef\xbf\xbd\xcc\xb5\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\n" },
+		{ "Building.DisplayName", "Building" },
+		{ "Building.Name", "EUnitType::Building" },
+		{ "Building.ToolTip", "\xef\xbf\xbd\xcc\xb5\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xc9\xbc\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xcf\xb8\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc6\xae\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\n" },
+#endif
+		{ "ModuleRelativePath", "C_Game/C_Unit/Selection_Unit.h" },
+		{ "None.DisplayName", "None" },
+		{ "None.Name", "EUnitType::None" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xc9\xbc\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xcf\xb8\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc6\xae\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd" },
+#endif
+		{ "Unit.Comment", "// \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\n" },
+		{ "Unit.DisplayName", "Unit" },
+		{ "Unit.Name", "EUnitType::Unit" },
+		{ "Unit.ToolTip", "\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd" },
+	};
+#endif // WITH_METADATA
+	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
+		{ "EUnitType::None", (int64)EUnitType::None },
+		{ "EUnitType::Unit", (int64)EUnitType::Unit },
+		{ "EUnitType::Building", (int64)EUnitType::Building },
+	};
+	static const UECodeGen_Private::FEnumParams EnumParams;
+};
+const UECodeGen_Private::FEnumParams Z_Construct_UEnum_RTS_Interface_EUnitType_Statics::EnumParams = {
+	(UObject*(*)())Z_Construct_UPackage__Script_RTS_Interface,
+	nullptr,
+	"EUnitType",
+	"EUnitType",
+	Z_Construct_UEnum_RTS_Interface_EUnitType_Statics::Enumerators,
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	UE_ARRAY_COUNT(Z_Construct_UEnum_RTS_Interface_EUnitType_Statics::Enumerators),
+	EEnumFlags::None,
+	(uint8)UEnum::ECppForm::EnumClass,
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UEnum_RTS_Interface_EUnitType_Statics::Enum_MetaDataParams), Z_Construct_UEnum_RTS_Interface_EUnitType_Statics::Enum_MetaDataParams)
+};
+UEnum* Z_Construct_UEnum_RTS_Interface_EUnitType()
+{
+	if (!Z_Registration_Info_UEnum_EUnitType.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUEnum(Z_Registration_Info_UEnum_EUnitType.InnerSingleton, Z_Construct_UEnum_RTS_Interface_EUnitType_Statics::EnumParams);
+	}
+	return Z_Registration_Info_UEnum_EUnitType.InnerSingleton;
+}
+// End Enum EUnitType
 
 // Begin Class ASelection_Unit
 void ASelection_Unit::StaticRegisterNativesASelection_Unit()
@@ -58,11 +126,18 @@ struct Z_Construct_UClass_ASelection_Unit_Statics
 		{ "Category", "Selection_Unit" },
 		{ "ModuleRelativePath", "C_Game/C_Unit/Selection_Unit.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_UnitType_MetaData[] = {
+		{ "AllowPrivateAccess", "TRUE" },
+		{ "Category", "Selection_Unit" },
+		{ "ModuleRelativePath", "C_Game/C_Unit/Selection_Unit.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Unit_Widget;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_DSelection;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Unit_Image;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_Unit_Widget_Class;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_UnitType_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_UnitType;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -74,11 +149,15 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASelection_Uni
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASelection_Unit_Statics::NewProp_DSelection = { "DSelection", nullptr, (EPropertyFlags)0x012408000008000d, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASelection_Unit, DSelection), Z_Construct_UClass_UDecalComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DSelection_MetaData), NewProp_DSelection_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASelection_Unit_Statics::NewProp_Unit_Image = { "Unit_Image", nullptr, (EPropertyFlags)0x0124080000000005, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASelection_Unit, Unit_Image), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Unit_Image_MetaData), NewProp_Unit_Image_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ASelection_Unit_Statics::NewProp_Unit_Widget_Class = { "Unit_Widget_Class", nullptr, (EPropertyFlags)0x0024080000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASelection_Unit, Unit_Widget_Class), Z_Construct_UClass_UClass, Z_Construct_UClass_UC_UnitWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Unit_Widget_Class_MetaData), NewProp_Unit_Widget_Class_MetaData) };
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_ASelection_Unit_Statics::NewProp_UnitType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ASelection_Unit_Statics::NewProp_UnitType = { "UnitType", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASelection_Unit, UnitType), Z_Construct_UEnum_RTS_Interface_EUnitType, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_UnitType_MetaData), NewProp_UnitType_MetaData) }; // 3572760594
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASelection_Unit_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASelection_Unit_Statics::NewProp_Unit_Widget,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASelection_Unit_Statics::NewProp_DSelection,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASelection_Unit_Statics::NewProp_Unit_Image,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASelection_Unit_Statics::NewProp_Unit_Widget_Class,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASelection_Unit_Statics::NewProp_UnitType_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASelection_Unit_Statics::NewProp_UnitType,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ASelection_Unit_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ASelection_Unit_Statics::DependentSingletons[])() = {
@@ -120,13 +199,16 @@ ASelection_Unit::~ASelection_Unit() {}
 // Begin Registration
 struct Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Unit_Selection_Unit_h_Statics
 {
+	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
+		{ EUnitType_StaticEnum, TEXT("EUnitType"), &Z_Registration_Info_UEnum_EUnitType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3572760594U) },
+	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ASelection_Unit, ASelection_Unit::StaticClass, TEXT("ASelection_Unit"), &Z_Registration_Info_UClass_ASelection_Unit, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASelection_Unit), 1703560073U) },
+		{ Z_Construct_UClass_ASelection_Unit, ASelection_Unit::StaticClass, TEXT("ASelection_Unit"), &Z_Registration_Info_UClass_ASelection_Unit, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASelection_Unit), 2054406905U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Unit_Selection_Unit_h_1959838968(TEXT("/Script/RTS_Interface"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Unit_Selection_Unit_h_66447511(TEXT("/Script/RTS_Interface"),
 	Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Unit_Selection_Unit_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Unit_Selection_Unit_h_Statics::ClassInfo),
 	nullptr, 0,
-	nullptr, 0);
+	Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Unit_Selection_Unit_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Unit_Selection_Unit_h_Statics::EnumInfo));
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -21,6 +21,10 @@ void AC_HUD::BeginPlay()
 	if (AreaWidget->IsValidLowLevel() == true) {
 		AreaWidget->AddToViewport();
 	}
+	FInputModeGameAndUI GameAndUI;
+	GameAndUI.SetLockMouseToViewportBehavior(EMouseLockMode::LockAlways);
+	RTS_Controller->SetInputMode(GameAndUI);
+
 }
 
 void AC_HUD::Tick(float _DeltaTime)
@@ -59,12 +63,19 @@ void AC_HUD::OpenClick(FVector2D _StartMousePos)
 {
 	StartMousePos = _StartMousePos;
 	bIsDrawing = true;
+
+	FInputModeGameAndUI GameAndUI;
+	GameAndUI.SetLockMouseToViewportBehavior(EMouseLockMode::DoNotLock);
+	RTS_Controller->SetInputMode(GameAndUI);
+
 }
 
 void AC_HUD::EndClick()
 {
 	bIsDrawing = false;
 	bEndDrawing = true;
-	FInputModeGameOnly GameOnly;
-	RTS_Controller->SetInputMode(GameOnly);
+	FInputModeGameAndUI GameAndUI;
+	GameAndUI.SetLockMouseToViewportBehavior(EMouseLockMode::LockAlways);
+	RTS_Controller->SetInputMode(GameAndUI);
+
 }

@@ -10,6 +10,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeC_SelectAreaWidget() {}
 
 // Begin Cross Module References
+COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector2D();
 RTS_INTERFACE_API UClass* Z_Construct_UClass_UC_SelectAreaWidget();
 RTS_INTERFACE_API UClass* Z_Construct_UClass_UC_SelectAreaWidget_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UCanvasPanel_NoRegister();
@@ -144,9 +145,13 @@ struct Z_Construct_UClass_UC_SelectAreaWidget_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "C_Game/C_Widget/C_SelectAreaWidget.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_HorizentalSize_MetaData[] = {
+		{ "ModuleRelativePath", "C_Game/C_Widget/C_SelectAreaWidget.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CanvasPanel;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_HorizontalBox;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_HorizentalSize;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -161,9 +166,11 @@ struct Z_Construct_UClass_UC_SelectAreaWidget_Statics
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UC_SelectAreaWidget_Statics::NewProp_CanvasPanel = { "CanvasPanel", nullptr, (EPropertyFlags)0x0010000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UC_SelectAreaWidget, CanvasPanel), Z_Construct_UClass_UCanvasPanel_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CanvasPanel_MetaData), NewProp_CanvasPanel_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UC_SelectAreaWidget_Statics::NewProp_HorizontalBox = { "HorizontalBox", nullptr, (EPropertyFlags)0x0010000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UC_SelectAreaWidget, HorizontalBox), Z_Construct_UClass_UHorizontalBox_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HorizontalBox_MetaData), NewProp_HorizontalBox_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UC_SelectAreaWidget_Statics::NewProp_HorizentalSize = { "HorizentalSize", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UC_SelectAreaWidget, HorizentalSize), Z_Construct_UScriptStruct_FVector2D, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HorizentalSize_MetaData), NewProp_HorizentalSize_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UC_SelectAreaWidget_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UC_SelectAreaWidget_Statics::NewProp_CanvasPanel,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UC_SelectAreaWidget_Statics::NewProp_HorizontalBox,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UC_SelectAreaWidget_Statics::NewProp_HorizentalSize,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UC_SelectAreaWidget_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UC_SelectAreaWidget_Statics::DependentSingletons[])() = {
@@ -207,10 +214,10 @@ UC_SelectAreaWidget::~UC_SelectAreaWidget() {}
 struct Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Widget_C_SelectAreaWidget_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UC_SelectAreaWidget, UC_SelectAreaWidget::StaticClass, TEXT("UC_SelectAreaWidget"), &Z_Registration_Info_UClass_UC_SelectAreaWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UC_SelectAreaWidget), 3182040541U) },
+		{ Z_Construct_UClass_UC_SelectAreaWidget, UC_SelectAreaWidget::StaticClass, TEXT("UC_SelectAreaWidget"), &Z_Registration_Info_UClass_UC_SelectAreaWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UC_SelectAreaWidget), 1751762036U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Widget_C_SelectAreaWidget_h_1360350867(TEXT("/Script/RTS_Interface"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Widget_C_SelectAreaWidget_h_1794788430(TEXT("/Script/RTS_Interface"),
 	Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Widget_C_SelectAreaWidget_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Widget_C_SelectAreaWidget_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -19,6 +19,9 @@ class RTS_INTERFACE_API UC_SelectAreaWidget : public UUserWidget
 	GENERATED_BODY()
 	
 public:
+	virtual void NativeConstruct() override;
+
+
 	UPROPERTY(meta = (BindWidget))
 	UCanvasPanel* CanvasPanel;
 
@@ -30,4 +33,6 @@ public:
 
 	UFUNCTION()
 	void RemoveWidget(UUserWidget* _Widget);
+	UPROPERTY()
+	FVector2D HorizentalSize = FVector2D(1500.f,150.f);
 };

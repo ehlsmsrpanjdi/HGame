@@ -24,4 +24,10 @@ protected:
 	TSoftObjectPtr<UImage> Unit_Image = nullptr;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
 	TSoftObjectPtr<class ASelection_Unit> Widget_Unit = nullptr;
+
+
+	virtual FReply NativeOnMouseButtonDown(const FGeometry& InGeometry, const FPointerEvent& InMouseEvent) override;
+
+	UPROPERTY()
+	FVector2D ImageSize = FVector2D(150.f, 150.f);
 };
