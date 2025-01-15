@@ -11,6 +11,7 @@ void EmptyLinkFunctionForGeneratedCodeC_UnitWidget() {}
 
 // Begin Cross Module References
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector2D();
+RTS_INTERFACE_API UClass* Z_Construct_UClass_AC_HUD_NoRegister();
 RTS_INTERFACE_API UClass* Z_Construct_UClass_ASelection_Unit_NoRegister();
 RTS_INTERFACE_API UClass* Z_Construct_UClass_UC_UnitWidget();
 RTS_INTERFACE_API UClass* Z_Construct_UClass_UC_UnitWidget_NoRegister();
@@ -41,6 +42,7 @@ struct Z_Construct_UClass_UC_UnitWidget_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Unit_Image_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "Category", "C_UnitWidget" },
+		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "C_Game/C_Widget/C_UnitWidget.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Widget_Unit_MetaData[] = {
@@ -51,10 +53,14 @@ struct Z_Construct_UClass_UC_UnitWidget_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ImageSize_MetaData[] = {
 		{ "ModuleRelativePath", "C_Game/C_Widget/C_UnitWidget.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MyHUD_MetaData[] = {
+		{ "ModuleRelativePath", "C_Game/C_Widget/C_UnitWidget.h" },
+	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FSoftObjectPropertyParams NewProp_Unit_Image;
-	static const UECodeGen_Private::FSoftObjectPropertyParams NewProp_Widget_Unit;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Unit_Image;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Widget_Unit;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_ImageSize;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_MyHUD;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -62,13 +68,15 @@ struct Z_Construct_UClass_UC_UnitWidget_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FSoftObjectPropertyParams Z_Construct_UClass_UC_UnitWidget_Statics::NewProp_Unit_Image = { "Unit_Image", nullptr, (EPropertyFlags)0x002408000008000d, UECodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UC_UnitWidget, Unit_Image), Z_Construct_UClass_UImage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Unit_Image_MetaData), NewProp_Unit_Image_MetaData) };
-const UECodeGen_Private::FSoftObjectPropertyParams Z_Construct_UClass_UC_UnitWidget_Statics::NewProp_Widget_Unit = { "Widget_Unit", nullptr, (EPropertyFlags)0x0024080000000005, UECodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UC_UnitWidget, Widget_Unit), Z_Construct_UClass_ASelection_Unit_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Widget_Unit_MetaData), NewProp_Widget_Unit_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UC_UnitWidget_Statics::NewProp_Unit_Image = { "Unit_Image", nullptr, (EPropertyFlags)0x012408000008000d, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UC_UnitWidget, Unit_Image), Z_Construct_UClass_UImage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Unit_Image_MetaData), NewProp_Unit_Image_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UC_UnitWidget_Statics::NewProp_Widget_Unit = { "Widget_Unit", nullptr, (EPropertyFlags)0x0124080000000005, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UC_UnitWidget, Widget_Unit), Z_Construct_UClass_ASelection_Unit_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Widget_Unit_MetaData), NewProp_Widget_Unit_MetaData) };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UC_UnitWidget_Statics::NewProp_ImageSize = { "ImageSize", nullptr, (EPropertyFlags)0x0020080000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UC_UnitWidget, ImageSize), Z_Construct_UScriptStruct_FVector2D, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ImageSize_MetaData), NewProp_ImageSize_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UC_UnitWidget_Statics::NewProp_MyHUD = { "MyHUD", nullptr, (EPropertyFlags)0x0124080000000000, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UC_UnitWidget, MyHUD), Z_Construct_UClass_AC_HUD_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MyHUD_MetaData), NewProp_MyHUD_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UC_UnitWidget_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UC_UnitWidget_Statics::NewProp_Unit_Image,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UC_UnitWidget_Statics::NewProp_Widget_Unit,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UC_UnitWidget_Statics::NewProp_ImageSize,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UC_UnitWidget_Statics::NewProp_MyHUD,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UC_UnitWidget_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UC_UnitWidget_Statics::DependentSingletons[])() = {
@@ -112,10 +120,10 @@ UC_UnitWidget::~UC_UnitWidget() {}
 struct Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Widget_C_UnitWidget_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UC_UnitWidget, UC_UnitWidget::StaticClass, TEXT("UC_UnitWidget"), &Z_Registration_Info_UClass_UC_UnitWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UC_UnitWidget), 3363327795U) },
+		{ Z_Construct_UClass_UC_UnitWidget, UC_UnitWidget::StaticClass, TEXT("UC_UnitWidget"), &Z_Registration_Info_UClass_UC_UnitWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UC_UnitWidget), 380614456U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Widget_C_UnitWidget_h_3718435457(TEXT("/Script/RTS_Interface"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Widget_C_UnitWidget_h_815800326(TEXT("/Script/RTS_Interface"),
 	Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Widget_C_UnitWidget_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Widget_C_UnitWidget_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

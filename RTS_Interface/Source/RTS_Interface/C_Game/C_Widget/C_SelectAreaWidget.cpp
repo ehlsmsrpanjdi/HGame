@@ -23,3 +23,10 @@ void UC_SelectAreaWidget::RemoveWidget(UUserWidget* _Widget)
 {
 	HorizontalBox->RemoveChild(_Widget);
 }
+
+void UC_SelectAreaWidget::RemoveAll()
+{
+	HorizontalBox->ClearChildren();
+}
+
+

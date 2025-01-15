@@ -52,3 +52,15 @@ void ASelection_Unit::IsSelected(bool _IsOn)
 	DSelection->SetVisibility(_IsOn);
 }
 
+void ASelection_Unit::WidgetHover(bool _Hover)
+{
+	if (_Hover == false) {
+		DSelection->SetMaterial(0, NormalMaterial);
+	}
+	else {
+		DSelection->SetMaterial(0, SelectionMaterial);
+	}
+}
+
+
+

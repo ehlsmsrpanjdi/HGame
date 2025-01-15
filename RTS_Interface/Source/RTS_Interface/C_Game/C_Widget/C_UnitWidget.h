@@ -21,13 +21,17 @@ public:
 	void SetUnit(class ASelection_Unit* _Unit);
 protected:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (BindWidget))
-	TSoftObjectPtr<UImage> Unit_Image = nullptr;
+	TObjectPtr<UImage> Unit_Image = nullptr;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
-	TSoftObjectPtr<class ASelection_Unit> Widget_Unit = nullptr;
+	TObjectPtr<class ASelection_Unit> Widget_Unit = nullptr;
 
 
 	virtual FReply NativeOnMouseButtonDown(const FGeometry& InGeometry, const FPointerEvent& InMouseEvent) override;
-
+	virtual void NativeOnMouseEnter(const FGeometry& InGeometry, const FPointerEvent& InMouseEvent);
+	virtual void NativeOnMouseLeave(const FPointerEvent& InMouseEvent);
 	UPROPERTY()
 	FVector2D ImageSize = FVector2D(150.f, 150.f);
+
+	UPROPERTY()
+	TObjectPtr<class AC_HUD> MyHUD = nullptr;
 };

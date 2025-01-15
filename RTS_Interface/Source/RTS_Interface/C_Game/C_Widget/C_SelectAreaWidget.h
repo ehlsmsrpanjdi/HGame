@@ -33,6 +33,10 @@ public:
 
 	UFUNCTION()
 	void RemoveWidget(UUserWidget* _Widget);
+
+	UFUNCTION()
+	void RemoveAll();
+
 	UPROPERTY()
 	FVector2D HorizentalSize = FVector2D(1500.f,150.f);
 };

@@ -16,6 +16,9 @@ class RTS_INTERFACE_API AC_HUD : public AHUD
 	friend class ARTS_InterfacePlayerController;
 public:
 	AC_HUD();
+
+	void WidgetClick(class ASelection_Unit* _Unit);
+
 protected:
 	virtual void BeginPlay() override;
 	virtual void Tick(float _DeltaTime) override;

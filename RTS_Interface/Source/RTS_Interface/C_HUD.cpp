@@ -10,6 +10,18 @@ AC_HUD::AC_HUD()
 {
 }
 
+void AC_HUD::WidgetClick(ASelection_Unit* _Unit)
+{
+	AreaWidget->RemoveAll();
+	for (ASelection_Unit* Unit : Selected_Units) {
+		Unit->IsSelected(false);
+	}
+	Selected_Units.Empty();
+	Selected_Units.Add(_Unit);
+	_Unit->IsSelected(true);
+	AreaWidget->AddWidget(_Unit->Unit_Widget);
+}
+
 void AC_HUD::BeginPlay()
 {
 	Super::BeginPlay();
@@ -77,5 +89,4 @@ void AC_HUD::EndClick()
 	FInputModeGameAndUI GameAndUI;
 	GameAndUI.SetLockMouseToViewportBehavior(EMouseLockMode::LockAlways);
 	RTS_Controller->SetInputMode(GameAndUI);
-
 }

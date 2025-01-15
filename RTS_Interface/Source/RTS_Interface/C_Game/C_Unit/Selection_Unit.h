@@ -8,6 +8,7 @@
 #include "Components/CapsuleComponent.h"
 #include "Engine/Texture2D.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "Materials/Material.h"
 #include "Selection_Unit.generated.h"
 
 
@@ -40,6 +41,9 @@ public:
 	void IsSelected(bool _IsOn);
 	UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
 	TObjectPtr<UC_UnitWidget> Unit_Widget = nullptr;
+
+	UFUNCTION()
+	void WidgetHover(bool _Hover);
 protected:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
 	TObjectPtr<UDecalComponent> DSelection = nullptr;
@@ -52,5 +56,11 @@ protected:
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
 	EUnitType UnitType = EUnitType::None;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+	TObjectPtr<UMaterial> NormalMaterial = nullptr;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+	TObjectPtr<UMaterial> SelectionMaterial = nullptr;
 };
 

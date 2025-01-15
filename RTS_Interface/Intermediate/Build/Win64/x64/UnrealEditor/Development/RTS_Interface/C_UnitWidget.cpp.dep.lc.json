@@ -65,7 +65,14 @@
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\components\\shapecomponent.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\shapecomponent.generated.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\capsulecomponent.generated.h",
-            "e:\\unreal\\hgame\\rts_interface\\intermediate\\build\\win64\\unrealeditor\\inc\\rts_interface\\uht\\selection_unit.generated.h"
+            "e:\\unreal\\hgame\\rts_interface\\intermediate\\build\\win64\\unrealeditor\\inc\\rts_interface\\uht\\selection_unit.generated.h",
+            "e:\\unreal\\hgame\\rts_interface\\source\\rts_interface\\c_hud.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\hud.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\hudhitbox.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\debugtextinfo.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\debugtextinfo.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\hud.generated.h",
+            "e:\\unreal\\hgame\\rts_interface\\intermediate\\build\\win64\\unrealeditor\\inc\\rts_interface\\uht\\c_hud.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

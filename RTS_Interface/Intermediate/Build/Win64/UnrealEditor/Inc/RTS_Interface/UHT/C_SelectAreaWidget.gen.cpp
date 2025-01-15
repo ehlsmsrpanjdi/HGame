@@ -65,6 +65,35 @@ DEFINE_FUNCTION(UC_SelectAreaWidget::execAddWidget)
 }
 // End Class UC_SelectAreaWidget Function AddWidget
 
+// Begin Class UC_SelectAreaWidget Function RemoveAll
+struct Z_Construct_UFunction_UC_SelectAreaWidget_RemoveAll_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "C_Game/C_Widget/C_SelectAreaWidget.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UC_SelectAreaWidget_RemoveAll_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UC_SelectAreaWidget, nullptr, "RemoveAll", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UC_SelectAreaWidget_RemoveAll_Statics::Function_MetaDataParams), Z_Construct_UFunction_UC_SelectAreaWidget_RemoveAll_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UC_SelectAreaWidget_RemoveAll()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UC_SelectAreaWidget_RemoveAll_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UC_SelectAreaWidget::execRemoveAll)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->RemoveAll();
+	P_NATIVE_END;
+}
+// End Class UC_SelectAreaWidget Function RemoveAll
+
 // Begin Class UC_SelectAreaWidget Function RemoveWidget
 struct Z_Construct_UFunction_UC_SelectAreaWidget_RemoveWidget_Statics
 {
@@ -116,6 +145,7 @@ void UC_SelectAreaWidget::StaticRegisterNativesUC_SelectAreaWidget()
 	UClass* Class = UC_SelectAreaWidget::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "AddWidget", &UC_SelectAreaWidget::execAddWidget },
+		{ "RemoveAll", &UC_SelectAreaWidget::execRemoveAll },
 		{ "RemoveWidget", &UC_SelectAreaWidget::execRemoveWidget },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -156,6 +186,7 @@ struct Z_Construct_UClass_UC_SelectAreaWidget_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_UC_SelectAreaWidget_AddWidget, "AddWidget" }, // 1232592002
+		{ &Z_Construct_UFunction_UC_SelectAreaWidget_RemoveAll, "RemoveAll" }, // 1212200849
 		{ &Z_Construct_UFunction_UC_SelectAreaWidget_RemoveWidget, "RemoveWidget" }, // 1756569846
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -214,10 +245,10 @@ UC_SelectAreaWidget::~UC_SelectAreaWidget() {}
 struct Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Widget_C_SelectAreaWidget_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UC_SelectAreaWidget, UC_SelectAreaWidget::StaticClass, TEXT("UC_SelectAreaWidget"), &Z_Registration_Info_UClass_UC_SelectAreaWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UC_SelectAreaWidget), 1751762036U) },
+		{ Z_Construct_UClass_UC_SelectAreaWidget, UC_SelectAreaWidget::StaticClass, TEXT("UC_SelectAreaWidget"), &Z_Registration_Info_UClass_UC_SelectAreaWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UC_SelectAreaWidget), 4181778801U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Widget_C_SelectAreaWidget_h_1794788430(TEXT("/Script/RTS_Interface"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Widget_C_SelectAreaWidget_h_640604352(TEXT("/Script/RTS_Interface"),
 	Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Widget_C_SelectAreaWidget_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Widget_C_SelectAreaWidget_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

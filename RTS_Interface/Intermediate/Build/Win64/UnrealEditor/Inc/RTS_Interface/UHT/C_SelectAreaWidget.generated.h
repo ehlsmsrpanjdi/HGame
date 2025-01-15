@@ -16,6 +16,7 @@ class UUserWidget;
 #define RTS_INTERFACE_C_SelectAreaWidget_generated_h
 
 #define FID_RTS_Interface_Source_RTS_Interface_C_Game_C_Widget_C_SelectAreaWidget_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execRemoveAll); \
 	DECLARE_FUNCTION(execRemoveWidget); \
 	DECLARE_FUNCTION(execAddWidget);
 
